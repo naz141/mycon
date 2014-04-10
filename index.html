@@ -102,32 +102,53 @@ document.getElementById("m").value=num1.value  / 0.3048;
 }
 
 </script>
+
 </head>
-
-
-<body>
-<div></div>
-<div align="center">
-<select onchange="cal()" id="unit1">
-<option value="m">Meter</option>
-<option value="km">Kilometer</option>
-<option value="cm">Centimeter</option>
-<option value="in">inches</option>
-<option value="ft">foot</option>
-
-</select><br />
-<input id="cm" onkeyup="cal()" type="text"/><br /><br />
-<div style="font-size:24px; font-weight:bolder" >=</div><br />
-
-<select id="unit2" onchange="cal()">
-
-<option value="m">Meter</option>
-<option value="km">Kilometer</option>
-<option value="cm">Centimeter</option>
-<option value="in">inches</option>
-<option value="ft">foot</option>
-</select><br />
-<input type="text" onkeyup="cal()" id="m" /><br />
+<div data-role="header" data-theme="b">
+<h1>Converter</h1>
 </div>
+<body>
+
+<div data-role="tabs" id="tabs">
+	<div data-role="navbar">
+    	<ul>
+      	<li><a href="#one" data-ajax="false">Convert</a></li>
+	    <li><a href="#two" data-ajax="false">About</a></li>
+    	</ul>
+	</div>
+	<div id="one" class="ui-body-d ui-content">
+  	<div  class="ui-field-contain">
+    <select name="select-custom-1" onchange="cal()" id="unit1" data-native-menu="false">
+	<option value="m">Meter</option>
+	<option value="km">Kilometer</option>
+	<option value="cm">Centimeter</option>
+	<option value="in">inches</option>
+	<option value="ft">foot</option>
+    </select>
+	</div>
+
+	<input id="cm" onkeyup="cal()" type="text"/>
+	<div align="center" style="font-size:20px; font-weight:bolder" >Convert to</div>
+	<div  class="ui-field-contain">
+    
+    <select name="select-custom-1" onchange="cal()" id="unit2" data-native-menu="false">
+	<option value="m">Meter</option>
+	<option value="km">Kilometer</option>
+	<option value="cm">Centimeter</option>
+	<option value="in">inches</option>
+	<option value="ft">foot</option>
+    </select>
+    </div>
+	<input type="text" onkeyup="cal()" id="m" />
+	</div>
+	<div style=" margin:40px 40px auto" id="two">
+    
+    <p>Version: 1.0</p>
+ <p>Developed by Nasrullah Najeeb</p>
+  <p>Email: anm.nasrullah@gmail.com</p>
+	</div>
+	</div>
+
+
 </body>
 </html>
